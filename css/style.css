@@ -1,0 +1,545 @@
+/* =========================================================
+   1. :root — Variables globales
+   ========================================================= */
+:root {
+  --black-main: #0a0a0a;
+  --black-card: #111111;
+  --black-soft: #1a1a1a;
+
+  --white-main: #ffffff;
+  --white-soft: #f8f8f8;
+  --text-muted: #b0b0b0;
+  --text-muted-light: #e0e0e0;
+
+  --gold-main: #b8975e;
+  --gold-hover: #d4af37;
+  --gold-soft: #c9a96e;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --container-width: 1200px;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+
+  --ease-premium: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 14px 50px rgba(184, 151, 94, 0.35);
+}
+
+/* =========================================================
+   2. Reset & Base
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black-main);
+  color: var(--white-soft);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-main);
+  outline-offset: 4px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* =========================================================
+   3. Header — Dorado Oro Premium (más grande)
+   ========================================================= */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+
+  background: linear-gradient(
+    135deg,
+    rgba(184, 151, 94, 0.92),
+    rgba(201, 169, 110, 0.88)
+  );
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(184, 151, 94, 0.35);
+}
+
+.header-inner {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 5.2rem; /* Tamaño equilibrado */
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.6),      /* Sombra negra principal */
+    0 2px 6px rgba(0, 0, 0, 0.4);       /* Sombra secundaria para profundidad */
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.75),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Navegación */
+.nav-list {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.4s var(--ease-premium);
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.6rem;
+}
+
+/* =========================================================
+   4. Hero — Fullscreen + Overlay
+   ========================================================= */
+.hero {
+  min-height: 100vh;
+  padding-top: 96px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600")
+    center / cover fixed;
+}
+
+.hero-content {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5.2rem);
+  color: var(--gold-main);
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted-light);
+  margin-bottom: 3rem;
+}
+
+/* =========================================================
+   5. Carrusel — Automático, Zoom MUY sutil
+   ========================================================= */
+/* ==========================================================================
+   Carrusel - Diseño Premium Automático y Elegante (Solo esta sección)
+   - Automático con keyframes (sin JS)
+   - Zoom sutil al hover
+   - Responsive: altura ajustada en móvil
+   - Sensación de lujo: bordes redondeados, sombra suave, transiciones fluidas
+   ========================================================================== */
+
+.carousel-section {
+  width: 100%;
+  padding: 4rem 0;
+  background: var(--black-deep);
+}
+
+.carousel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-inner {
+  display: flex;
+  width: 500%; /* Para 5 imágenes */
+  animation: slide 36s infinite ease-in-out;
+  will-change: transform; /* Mejora rendimiento */
+}
+
+.carousel-slide {
+  flex: 0 0 20%; /* 100% / 5 */
+  height: 520px; /* Altura elegante en desktop */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 1.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: block;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.06); /* Zoom sutil y lujoso */
+}
+
+/* Animación automática: pausa breve en cada slide */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }         /* Pausa 1 */
+  25%  { transform: translateX(-20%); }
+  45%  { transform: translateX(-20%); }      /* Pausa 2 */
+  50%  { transform: translateX(-40%); }
+  70%  { transform: translateX(-40%); }      /* Pausa 3 */
+  75%  { transform: translateX(-60%); }
+  95%  { transform: translateX(-60%); }      /* Pausa 4 */
+  100% { transform: translateX(-80%); }      /* Va a la última y reinicia */
+}
+
+/* Responsive - Carrusel más compacto en móvil */
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 360px; /* Menos alto para no ocupar toda la pantalla */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    height: 300px; /* Muy móvil: aún más compacto */
+  }
+
+  .carousel-section {
+    padding: 3rem 0;
+  }
+}
+
+/* =========================================================
+   6. Secciones Generales
+   ========================================================= */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--gold-main);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  color: var(--text-muted-light);
+}
+
+/* =========================================================
+   7. Tarjetas
+   ========================================================= */
+.cards-grid,
+.origin-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.origin-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card,
+.origin-card {
+  background: var(--black-card);
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.5s var(--ease-premium),
+              box-shadow 0.5s var(--ease-premium);
+}
+
+.card:hover,
+.origin-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  color: var(--gold-main);
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s var(--ease-premium);
+}
+
+.card:hover .card-icon {
+  transform: scale(1.15);
+}
+
+.card h3,
+.origin-card h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   8. Productos
+   ========================================================= */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: var(--black-card);
+  border-radius: 18px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.5s var(--ease-premium),
+              box-shadow 0.5s var(--ease-premium);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-gold);
+}
+
+.product-image {
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.product-image img {
+  height: 280px;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease-premium);
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
+}
+
+.price {
+  color: var(--gold-main);
+  font-weight: 600;
+}
+
+.btn-buy {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold-main), var(--gold-hover));
+  color: #000;
+  font-weight: 600;
+  transition: transform 0.4s var(--ease-premium),
+              box-shadow 0.4s var(--ease-premium);
+}
+
+.btn-buy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212,175,55,0.45);
+}
+
+/* =========================================================
+   9. Footer
+   ========================================================= */
+/* ==========================================================================
+   Footer - Diseño Premium con Logo Centrado
+   Logo grande, centrado, sombra negra sutil + dorado en enlaces
+   ========================================================================== */
+
+.footer {
+  background: var(--black); /* Negro profundo */
+  padding: 6rem 0 4rem;     /* Más espacio arriba y abajo */
+  text-align: center;
+  border-top: 1px solid rgba(184, 151, 94, 0.15); /* Línea dorada sutil */
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+/* Enlaces rápidos - centrados */
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+.footer-links li a:hover {
+  color: var(--gold-light);
+}
+
+/* Contacto - centrado */
+.contact-info p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+}
+
+/* Redes sociales - grandes y doradas */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 3rem 0 3.5rem;
+}
+
+.social-icons a {
+  color: var(--text-muted);
+  font-size: 2.2rem;
+  transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+  color: var(--gold-light);
+  transform: translateY(-4px) scale(1.15);
+}
+
+/* Copyright - pequeño y discreto */
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Responsive - en móvil todo queda bien centrado */
+@media (max-width: 768px) {
+  .footer {
+    padding: 5rem 0 3rem;
+  }
+
+  .footer-logo {
+    height: 70px;
+  }
+
+  .footer-links {
+    gap: 1.8rem;
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    height: 60px;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   10. Media Queries — Mobile First
+   ========================================================= */
+@media (max-width: 1024px) {
+  .carousel-slide img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .carousel-slide img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    height: 82px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+}
