@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Negra - Café de Altura Premium</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+</head>
+<body>
+    <!-- Navigation -  -->
+    <nav class="nav">
+        <div class="nav-con">
+            <!-- Logo -->
+        
+
+ <div class="logo" id="nav-logo" >
+                <div class="logo-symbol">RN</div>
+                <span class="logo-text">Reserva Negra</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Inicio</a>
+                <a href="#sobre" class="nav-link">Café</a>
+                <a href="#producto" class="nav-link">Producto</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <!-- Mobile Menu - Checkbox hack -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <i class="icon-menu" data-lucide="menu"></i>
+                <i class="icon-close" data-lucide="x"></i>
+            </label>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <a href="#hero" class="mob-link">Inicio</a>
+                <a href="#sobre" class="mob-link">Café</a>
+                <a href="#producto" class="mob-link">Producto</a>
+                <a href="#contacto" class="mob-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        
+        <div class="hero-con">
+            <!-- Logo Grande -->
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="Reserva Negra" class="hero-logo-img">
+                <h1 class="hero-title">Reserva Negra</h1>
+                <p class="hero-sub">Café de Altura</p>
+            </div>
+
+            <!-- Tagline -->
+            <div class="hero-tag">
+                <h2 class="tag-txt">Un café con carácter</h2>
+                <p class="tag-desc">
+                    Granos selectos de micro-lotes 1,400 metros sobre el nivel del mar 
+                    en las montañas de <span class="gold">Murra, Nueva Segovia, Nicaragua</span>
+                </p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#producto" class="hero-btn">Conoce la esencia de RN</a>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll">
+                <a href="#sobre">
+                    <i data-lucide="arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel SIMPLIFICADO - 4 imágenes, más rápido, sin controles -->
+    <section class="car">
+        <div class="car-con">
+            <!-- Slides Container -->
+            <div class="car-slides">
+                <!-- Slide 1 -->
+                <div class="car-slide slide-1">
+                    <div class="slide-img" style="background-image: url('images/imagenpaisaje2.png');"></div>
+                    <div class="slide-over"></div>
+                    <div class="slide-con">
+                        <h3 class="slide-title">1 Libra de Pureza</h3>
+                        <p class="slide-sub">Granos enteros de origen único</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="car-slide slide-2">
+                    <div class="slide-img" style="background-image: url('images/imagenCafe.png');"></div>
+                    <div class="slide-over"></div>
+                    <div class="slide-con">
+                        <h3 class="slide-title">Café de Especialidad</h3>
+                        <p class="slide-sub">Calidad premium certificada</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="car-slide slide-3">
+                    <div class="slide-img" style="background-image: url('images/imagenNina.png');"></div>
+                    <div class="slide-over"></div>
+                    <div class="slide-con">
+                        <h3 class="slide-title">Proceso Natural</h3>
+                        <p class="slide-sub">Secado al sol de manera tradicional</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="car-slide slide-4">
+                    <div class="slide-img" style="background-image: url('images/imagenPaisaje.png');"></div>
+                    <div class="slide-over"></div>
+                    <div class="slide-con">
+                        <h3 class="slide-title">Origen Único</h3>
+                        <p class="slide-sub">Trazabilidad desde la finca hasta tu taza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="about-bg"></div>
+        
+        <div class="about-con">
+            <!-- Section Title -->
+            <div class="sec-header">
+                <p class="sec-sub">Nuestra Historia</p>
+                <h2 class="sec-title">Café de Altura. Carácter. Pureza.</h2>
+                <div class="sec-div"></div>
+            </div>
+
+            <!-- Origin Story -->
+            <div class="origin">
+                <div class="origin-con">
+                    <h3 class="origin-title">Desde las Montañas de Murra</h3>
+                    <div class="origin-txt">
+                        <p>
+                            En las majestuosas montañas de <strong>Murra, Nueva Segovia, Nicaragua</strong>, 
+                            donde las nubes abrazan los cafetales y el clima fresco de altura crea las condiciones perfectas, 
+                            nace <strong>Reserva Negra</strong>.
+                        </p>
+                        <p>
+                            Nueva Segovia es reconocida mundialmente como una de las regiones cafetaleras más prestigiosas 
+                            de Centroamérica. Sus suelos volcánicos ricos en minerales, altitudes que alcanzan los 1,400 metros 
+                            sobre el nivel del mar, y un microclima único en la región, permiten que el café desarrolle un sabor excepcional.
+                        </p>
+                        <p>
+                            Cada grano de Reserva Negra es cultivado por pequeños productores que han perfeccionado 
+                            el arte del café durante generaciones, respetando la tierra y las tradiciones mientras 
+                            incorporan las mejores prácticas de agricultura sostenible.
+                        </p>
+                    </div>
+                </div>
+                <div class="origin-img">
+                    <img src="https://images.unsplash.com/photo-1524350876685-274059332603?w=800&q=80" alt="Finca de café en Murra" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="feat-grid">
+                <!-- Feature 1 -->
+                <div class="feat-card">
+                    <div class="feat-icon">
+                        <i data-lucide="mountain"></i>
+                    </div>
+                    <h4 class="feat-title">1,400 msnm</h4>
+                    <p class="feat-desc">Altitud óptima para café de especialidad</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feat-card">
+                    <div class="feat-icon">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <h4 class="feat-title">100% Arábica</h4>
+                    <p class="feat-desc">Variedades Caturra, Catuaí, Catimor y Maracaturra, seleccionadas</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feat-card">
+                    <div class="feat-icon">
+                        <i data-lucide="coffee"></i>
+                    </div>
+                    <h4 class="feat-title">Beneficio Húmedo</h4>
+                    <p class="feat-desc">Proceso lavado tradicional de 24 horas</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feat-card">
+                    <div class="feat-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h4 class="feat-title">Puntaje 84+</h4>
+                    <p class="feat-desc">Calidad de especialidad certificada</p>
+                </div>
+            </div>
+
+            <!-- Tasting Notes -->
+            <div class="taste">
+                <h3 class="taste-title">Perfil de Taza</h3>
+                <p class="taste-quote">
+                    "Un café de cuerpo sedoso con notas intensas de chocolate negro, 
+                    destellos de frutos rojos maduros, suave caramelo y una acidez jugosa que recuerda a manzana verde."
+                </p>
+                <div class="taste-tags">
+                    <span class="taste-tag">Chocolate Negro</span>
+                    <span class="taste-tag">Frutos Rojos</span>
+                    <span class="taste-tag">Caramelo</span>
+                    <span class="taste-tag">Manzana Verde</span>
+                    <span class="taste-tag">Cuerpo Cremoso</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="producto" class="prod">
+        <div class="prod-con">
+            <!-- Section Title -->
+            <div class="sec-header">
+                <p class="sec-sub">Nuestro Producto</p>
+                <h2 class="sec-title">La Reserva</h2>
+            </div>
+
+            <!-- Product Card -->
+            <div class="prod-card">
+                <!-- Product Image -->
+                <div class="prod-img-con">
+                    <div class="prod-img-wrap">
+                        <img src="images/formato.png" alt="Reserva Negra - 1 Libra" class="prod-img" loading="lazy">
+                        <div class="prod-img-over">
+                            <span class="over-txt">Premium Quality</span>
+                        </div>
+                    </div>
+                    <!-- Badge -->
+                    <div class="prod-badge">Edición Limitada</div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="prod-info">
+                    <div class="prod-rate">
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                    </div>
+                    
+                    <h3 class="prod-name">Reserva Negra</h3>
+                    <p class="prod-peso">1 Libra (454g)</p>
+                    
+                    <ul class="prod-feat">
+                        <li class="prod-item">
+                            <div class="item-dot"></div>
+                            <span>Tostado artesanal medio</span>
+                        </li>
+                        <li class="prod-item">
+                            <div class="item-dot"></div>
+                            <span>Molienda  única</span>
+                        </li>
+                        <li class="prod-item">
+                            <div class="item-dot"></div>
+                            <span>Origen: Murra, Nueva Segovia</span>
+                        </li>
+                        <li class="prod-item">
+                            <div class="item-dot"></div>
+                            <span>Empaque hermético</span>
+                        </li>
+                        <li class="prod-item">
+                            <div class="item-dot"></div>
+                            <span>Certificación de especialidad</span>
+                        </li>
+                    </ul>
+
+                    <div class="prod-disp">Próximamente Disponible</div>
+
+                    <p class="prod-note">
+                        Muy pronto incorporaremos más formatos: <strong>250g</strong>, <strong>1kg</strong> y <strong>cajas de regalo</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interest Form Section -->
+    <section id="interes" class="form">
+        <div class="form-bg"></div>
+        
+        <div class="form-con">
+            <div class="form-header">
+                <p class="sec-sub">Lista de Espera</p>
+                <h2 class="sec-title">¿Te interesa?</h2>
+                <p class="form-desc">Regístrate y alguien de nuestro equipo se pondrá a tu disposición y te brindará toda la información que necesites.</p>
+            </div>
+
+            <!-- Form Netlify -->
+            <form name="contact" method="POST" netlify class="form-main">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" required class="form-in" placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" name="email" required class="form-in" placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-in" placeholder="+505 0000 0000">
+                </div>
+
+                <button type="submit" class="form-btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section id="contacto" class="contact">
+        <div class="contact-con">
+            <div class="contact-header">
+                <p class="sec-sub">Contacto</p>
+                <h2 class="sec-title">¿Tienes preguntas?</h2>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.me/50586275732?text=Hola,%20me%20gustaria%20obtener%20mas%20informacion" target="_blank" rel="noopener noreferrer" class="whatsapp">
+                <div class="whatsapp-icon">
+                    <i data-lucide="message-circle"></i>
+                </div>
+                <h3 class="whatsapp-title">Escríbenos </h3>
+                <p class="whatsapp-desc">Contáctanos directamente vía WhatsApp</p>
+                <span class="whatsapp-btn">Enviar mensaje</span>
+            </a>
+
+            <!-- Additional Contact -->
+            <div class="contact-info">
+                <a href="mailto:ag3666955@gmail.com" class="contact-link">
+                    <i data-lucide="mail"></i>
+                    ag3666955@gmail.com
+                </a>
+                <div class="contact-link">
+                    <i data-lucide="map-pin"></i>
+                    Murra, Nueva Segovia, Nicaragua
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Logo -->
+            <a href="#hero" class="footer-logo">
+                <img src="images/logo.png" alt="Reserva Negra Logo" class="footer-logo-img">
+                <span class="footer-logo-txt">Reserva Negra</span>
+            </a>
+            
+            <p class="footer-tag">Café de Altura Premium • Murra, Nueva Segovia, Nicaragua</p>
+            
+            <p class="footer-copy">
+                © 2024 Reserva Negra. Todos los derechos reservados.
+            </p>
+        </footer>
+    </section>
+
+
+</body>
+</html>
