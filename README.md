@@ -13,7 +13,7 @@ Demo en Vivo
 
 ## 🖼️ Vista Previa
 
-![Reserva Negra Interface](/images/rn.png.png)
+![Reserva Negra Interface](/images/rn.png)
 
 **RN Reserva Negra**
 
